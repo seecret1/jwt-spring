@@ -1,0 +1,15 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+    mongodb:
+      uri: mongodb://root:root@localhost:27017/users_db?authSource=admin
+      auto-index-creation: true
+
+user-service:
+  jwt:
+    secret: MyVeryLongAndSecureSecretKeyForJWTTokenSigningThatIsAtLeast64CharactersLongToMeetHS512Requirements123456789
+    tokenExpiration: 1m
+    refreshTokenExpiration: 20s
